@@ -376,7 +376,7 @@ img {
   font-size: 16px;
   line-height: 1.18;
   margin-top: 0;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .team-list > .item {
@@ -388,7 +388,7 @@ img {
 
 .item .image {
   margin-top: 0;
-  margin-bottom: 30px;
+  margin-bottom: 16px;
 }
 
 .links::after {
@@ -396,9 +396,38 @@ img {
   content: "";
   width: 44px;
   height: 44px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
-.link-instagram
+.social-links {
+  margin-top: 0;
+  margin-right: 32px;
+  margin-left: 32px;
+  margin-bottom: 30px;
+}
+
+.link-instagram::after {
+  background-image: url("../Images/svg-images/instagram.svg");
+}
+
+a,
+p {
+  margin: 0;
+}
+
+.link-twitter::after {
+  background-image: url("../Images/svg-images/twitter.svg");
+}
+
+.link-facebook::after {
+  background-image: url("../Images/svg-images/facebook.svg");
+}
+
+.link-linkedin::after {
+  background-image: url("../Images/svg-images/linkedin.svg");
+}
 
 /* -----------------------------Footer---------------------------- */
 
@@ -463,6 +492,39 @@ img {
 .footer .footer-tel:hover,
 .footer .footer-tel:focus {
   color: var(--accent-color);
+}
+
+.social-list {
+  margin-left: 70px;
+}
+
+.social-title {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+
+  color: #ffffff;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.footer-flex {
+  display: flex;
+}
+
+.footer-flex .list + .list {
+  margin-left: 10px;
+}
+
+.footer-links::after {
+  display: flex;
+  content: "";
+  width: 44px;
+  height: 44px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
 /* -----------------------------Portfolio-------------------------- */
