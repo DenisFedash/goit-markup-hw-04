@@ -26,6 +26,12 @@ p {
   margin: 0;
 }
 
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
 .link {
   text-decoration: none;
 }
@@ -270,31 +276,12 @@ img {
 
 .list-item {
   display: block;
-  content: "";
   width: 270px;
   height: 120px;
   padding: 25px 100px;
-  background-repeat: no-repeat;
-  background-position: center;
   background-color: #f5f4fa;
   margin-bottom: 30px;
 }
-
-/* .icon-antenna::before {
-  background-image: url(../Images/svg-images/antenna\ 1.svg);
-}
-
-.icon-clock::before {
-  background-image: url(../Images/svg-images/clock\ 1.svg);
-}
-
-.icon-diagram::before {
-  background-image: url(../Images/svg-images/diagram\ 1.svg);
-}
-
-.icon-astronaut::before {
-  background-image: url(../Images/svg-images/astronaut\ 1.svg);
-} */
 
 .section-title {
   font-weight: 700;
@@ -380,37 +367,38 @@ img {
   margin-bottom: 16px;
 }
 
-.links::after {
-  display: inline-block;
-  content: "";
+.social-link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  background-color: #ffffff;
+  fill: #afb1b8;
+}
+
+.social-link:hover,
+.social-link:focus,
+.social-link:hover .social-icon,
+.social-link:focus .social-icon {
+  fill: #ffffff;
+  background-color: var(--accent-color);
+}
+
+.socials-list {
+  display: flex;
+  justify-content: center;
+}
+
+.social-item {
+  margin-bottom: 30px;
   width: 44px;
   height: 44px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
 }
 
-.social-links {
-  margin-top: 0;
-  margin-right: 32px;
-  margin-left: 32px;
-  margin-bottom: 30px;
-}
-
-.link-instagram::after {
-  background-image: url("../Images/svg-images/instagram.svg");
-}
-
-.link-twitter::after {
-  background-image: url("../Images/svg-images/twitter.svg");
-}
-
-.link-facebook::after {
-  background-image: url("../Images/svg-images/facebook.svg");
-}
-
-.link-linkedin::after {
-  background-image: url("../Images/svg-images/linkedin.svg");
+.social-item:not(:last-child) {
+  margin-right: 10px;
 }
 
 /* -----------------------------Footer---------------------------- */
@@ -429,6 +417,16 @@ img {
 
 .footer-logo .footer-logo-two {
   color: #ffffff;
+}
+
+.clients-title {
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  margin-top: 0;
+  color: var(--title-text-color);
 }
 
 /* ----------------------------Footer nav------------------------ */
