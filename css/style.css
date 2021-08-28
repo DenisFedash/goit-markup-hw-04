@@ -129,14 +129,23 @@ img {
   fill: var(--primary-text-color);
 }
 
-.icons {
-  vertical-align: middle;
-  margin-right: 10px;
+.contacts-link {
+  align-items: center;
+  fill: var(--primary-text-color);
 }
 
-.icon-contacts:hover,
-.icon-contacts:focus {
+.contacts-icons {
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.contacts-item .contacts-link:hover,
+.contacts-item .contacts-link:focus,
+.contacts-link:hover .contacts-icons,
+.contacts-link:focus .contacts-icons {
   fill: var(--accent-color);
+  color: var(--accent-color);
 }
 
 .contacts .item + .item {
@@ -147,11 +156,6 @@ img {
   padding-top: 32px;
   padding-bottom: 32px;
   color: var(--primary-text-color);
-}
-
-.contacts .link:hover,
-.contacts .link:focus {
-  color: var(--accent-color);
 }
 
 /* -------------------------Hero---------------------- */
@@ -509,7 +513,42 @@ img {
   color: var(--accent-color);
 }
 
-.social-list {
+.footer-link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  background-color: rgba(255, 255, 255, 0.1);
+  fill: rgba(255, 255, 255, 1);
+}
+
+.footer-link:hover,
+.footer-link:focus {
+  background-color: var(--accent-color);
+}
+
+.footer-social {
+  display: flex;
+}
+
+.footer-flex {
+  display: flex;
+}
+
+.footer-item {
+  width: 44px;
+  height: 44px;
+}
+
+.footer-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.section-socials {
+  display: inline-block;
+  margin-top: 12px;
   margin-left: 70px;
 }
 
@@ -522,24 +561,6 @@ img {
   color: #ffffff;
   margin: 0;
   margin-bottom: 20px;
-}
-
-.footer-flex {
-  display: flex;
-}
-
-.footer-flex .list + .list {
-  margin-left: 10px;
-}
-
-.footer-links::after {
-  display: flex;
-  content: "";
-  width: 44px;
-  height: 44px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
 }
 
 /* -----------------------------Portfolio-------------------------- */
@@ -588,16 +609,11 @@ img {
   letter-spacing: 0.06em;
 }
 
-.image-title {
-  margin-top: 0;
-  margin-bottom: 0;
+.card:hover,
+.card:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
-
-.image-text {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
 .image {
   display: flex;
   flex-wrap: wrap;
